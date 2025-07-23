@@ -1,0 +1,23 @@
+{
+  "name": "mental-health-journal",
+  "version": "1.0.0",
+  "description": "A full-stack journaling web app that analyzes journal entries for stress, anxiety, or depression using AI and saves emotional history.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ReshamJagdale/mental-health-journal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ReshamJagdale/mental-health-journal/issues"
+  },
+  "homepage": "https://github.com/ReshamJagdale/mental-health-journal#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
