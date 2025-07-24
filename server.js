@@ -9,6 +9,7 @@ const PORT = 5000;
 app.use(express.json());
 
 // Connect to MongoDB
+console.log("🔍 URI from .env:", process.env.MONGODB_URI);
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
