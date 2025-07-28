@@ -26,6 +26,18 @@ app.get('/', (req, res) => {
 
 app.use('/api/journal', journalRoutes);
 
+// 📥 GET all journal entries
+const JournalEntry = require('./models/JournalEntry'); // ensure this is at the top if not already
+
+app.get('/api/journal', async (req, res) => {
+  try {
+    const entries = await JournalEntry.find().sort({ date: -1 }); // latest first
+    res.json(entries);
+  } catch (error) {
+    res.status(500).json({ error: 'Server error' });
+  }
+});
+
 // Start Server
 app.listen(PORT, () => {
   console.log(`✅ Server running on http://localhost:${PORT}`);
