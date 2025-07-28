@@ -5,6 +5,8 @@ require('dotenv').config(); // <--- Load .env
 const app = express();
 const PORT = 5000;
 
+const journalRoutes = require('./routes/journal');
+
 // Middleware
 app.use(express.json());
 
@@ -21,6 +23,8 @@ mongoose.connect(process.env.MONGODB_URI, {
 app.get('/', (req, res) => {
   res.send('Mental Health Journal backend is running!');
 });
+
+app.use('/api/journal', journalRoutes);
 
 // Start Server
 app.listen(PORT, () => {
